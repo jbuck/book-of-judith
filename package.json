@@ -7,5 +7,9 @@
     "type": "git",
     "url": "git://github.com/jbuck/book-of-judith.git"
   },
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.2.0",
+    "habitat": "~0.4.1"
+  }
 }
