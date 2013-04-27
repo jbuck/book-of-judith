@@ -44,6 +44,12 @@ function backToStart() {
 	$('#imgselected').attr('src', '');
 	$('#contributeblock, .contribute').hide();
 	$('#selecttype').show();
+	// clear the canvas
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	canvas.width = 0;
+	canvas.height = 0;
+	// clear the input fields
+	$('#txtImageUrl, #imageLoader').val('');
 }
 
 function selectJudithsArt() {
