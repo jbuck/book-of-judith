@@ -1,0 +1,11 @@
+{
+  "name": "book-of-judith",
+  "version": "0.0.0",
+  "description": "Collaborative choir for the Book of Judith",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jbuck/book-of-judith.git"
+  },
+  "license": "BSD"
+}
