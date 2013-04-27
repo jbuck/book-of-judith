@@ -51,20 +51,26 @@
         target.appendChild( container );
       };
       options.displayLoading = function() {
-        var bigPlay = document.getElementById( "controls-big-play-button" );
+        var bigPlay = document.getElementById( "controls-big-play-button" ),
+            loadingMessage = document.querySelector( ".loading-message" );
         _this.on( "play", options._surpressPlayEvent );
         if ( bigPlay ) {
           bigPlay.classList.add( "hide-button" );
         }
-        document.querySelector( ".loading-message" ).classList.add( "show-media" );
+        if ( loadingMessage ) {
+          loadingMessage.classList.add( "show-media" );
+        }
       };
       options.hideLoading = function() {
-        var bigPlay = document.getElementById( "controls-big-play-button" );
+        var bigPlay = document.getElementById( "controls-big-play-button" ),
+            loadingMessage = document.querySelector( ".loading-message" );
         _this.off( "play", options._surpressPlayEvent );
         if ( bigPlay ) {
           bigPlay.classList.remove( "hide-button" );
         }
-        document.querySelector( ".loading-message" ).classList.remove( "show-media" );
+        if ( loadingMessage ) {
+          loadingMessage.classList.add( "show-media" );
+        }
       };
 
       if ( !options.from || options.from > options.duration ) {
@@ -391,7 +397,7 @@
       if ( updates.title ) {
         options.title = updates.title;
       }
-      if ( updates.denied ) {
+      if ( updates.hasOwnProperty( "denied" ) ) {
         options.denied = updates.denied;
       }
       if ( updates.hasOwnProperty( "hidden" ) ) {
