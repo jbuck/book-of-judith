@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image contribution for the Book of Judith</title>
+	<style type="text/css">
+		#preview { margin: 10px; }
+		#judithsArt img { margin: 10px; }
+		#contributeblock, .contribute { display: none; }
+	</style>
+  </head>
+  <body>
+    <h1>Image contribution for the Book of Judith</h1>
+	<div id="selecttype">
+		<button id="btnSelectJudithArt" onclick="selectJudithsArt();">I want to use some of Judith's Art</button>
+		<button id="btnSelectWeb" onclick="selectWebArt();">I want to use an image from the web</button>
+		<button id="btnSelectOwn" onclick="selectOwnArt();">I want to use an image from my computer</button>
+	</div>
+
+	<div id="contributeblock">
+		<div id="judithsArt" class="contribute">
+			<img src="http://www.lasereagles.com/assets/thumbs/5d8aa_web_judith_bird_140.jpg">
+			<img src="http://www.lasereagles.com/assets/thumbs/bbb8a_web_judith_dalmation_360.jpg">
+			<img src="http://www.lasereagles.com/assets/thumbs/c70ea_web_judith_riptide_180.jpg">
+			<img src="http://www.lasereagles.com/assets/thumbs/7e2d3_web_judith_woman_300.jpg">
+		</div>
+		<div id="webArt" class="contribute">
+		    Enter the URL to an image you would like to contribute:<br>
+		    <input type="text" id="txtImageUrl" name="txtImageUrl" size="90" />
+		    <div id="preview">
+				<img id="imgselected" alt="" src="" border="0">
+			</div>
+		</div>
+		<div id="ownArt" class="contribute">
+			<input type="file" id="imageLoader" name="imageLoader"/>
+			<canvas id="imageCanvas"></canvas>
+		</div>
+
+		<button id="btncontribute" onclick="contributeImage();" disabled>Use this image</button>
+		<button onclick="backToStart();">Go back</button>
+	</div>
+
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/cont-image.js"></script>
+  </body>
+</html>
