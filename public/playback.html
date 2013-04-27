@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playback demo</title>
+    <link rel="stylesheet" href="css/playback.css">
+    <link rel="stylesheet" href="css/controls.css">
+  </head>
+  <body>
+    <div>
+      <div id="media">
+        <div class="video"></div>
+      </div>
+      <div id="controls" class="controls"><div>
+    </div>
+    <script src="js/popcorn.js"></script>
+    <script src="js/popcorn.sequencer.js"></script>
+    <script src="js/require.js"></script>
+    <script>
+      var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
+        .sequencer({
+          volume: 100,
+          start: 0,
+          end: 100,
+          duration: 100,
+          target: "media",
+          width: 50,
+          height: 50,
+          zindex: 1,
+          source: "in-the-name/in-the-name-march-2011.mp3"
+        });
+
+      var require = requirejs.config({
+        baseUrl: "/js",
+        paths: {
+          "text": "require.text"
+        }
+      });
+
+      require( [ "ui/widget/controls" ], function( Controls ) {
+        p.controls( true );
+        Controls.create( "controls", p );
+      });
+
+    </script>
+  </body>
+</html>

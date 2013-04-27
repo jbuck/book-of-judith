@@ -1,0 +1,26 @@
+#media {
+  position: relative;
+  height: 200px;
+  width: 500px;
+}
+
+.video {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: #FFF;
+}
+
+.controls {
+  background: none repeat scroll 0 0 white;
+  border: 1px solid #D5D6D5;
+  bottom: 0;
+  height: 41px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  visibility: visible;
+  z-index: 2;
+}
