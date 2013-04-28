@@ -34,6 +34,7 @@ var Poetry = {
                 callback: function(dataUrl) {
                     // window.open(dataUrl);
                     console.log(dataUrl);
+                    that.fileHandler(dataUrl);
                 }
             });
         });
@@ -96,6 +97,33 @@ var Poetry = {
         }
 
         this.stage.add(this.layer);
+    },
+    
+    fileHandler: function(imageData) {
+        var xhr = new XMLHttpRequest();
+        var fd = new FormData();
+
+        fd.append( "image", imageData );
+
+        xhr.addEventListener( "progress", function( event ) {
+          if ( event.lengthComputable ) {
+            console.log( "%d%% complete", oEvent.loaded / oEvent.total * 100 );
+          }
+        });
+        xhr.addEventListener( "load", function() {
+          if (this.status != 200) {
+            return;
+          }
+
+          var url = JSON.parse( this.responseText ).url;
+
+          console.log( "Done uploading %s", f.name );
+          var li = document.createElement( "li" );
+          li.innerHTML = "<a href='" + url + "'>" + url + "</a>";
+          uploaded.appendChild(li);
+        });
+        xhr.open( "POST", "/upload", false );
+        xhr.send( fd );
     }
 }
 
