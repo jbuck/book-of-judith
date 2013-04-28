@@ -14,10 +14,7 @@
 
 		<div id="playAndRecord">
 			<h2>Preview and Record</h2>
-			Selected: <span id="selected">&lt; none &gt; </span>
-			<input type="hidden" id="hfstart" value="">
-			<input type="hidden" id="hfend" value="">
-			<input type="hidden" id="hftitle" value="Complete Song">
+			Selected: <span id="selected">Complete Song</span>
 
 			<div id="player" style="">
 				<audio id="choirplayer">
@@ -27,6 +24,7 @@
 				</audio>
 			</div>
 			<button id="btnPreviewSong" onclick="playSelection(false);">Preview Selection</button>
+			<button id="btnStopPreview" onclick="stopPlayer();" style="display: none;">Stop Player</button>
 
 			<div id="recorder">
 
