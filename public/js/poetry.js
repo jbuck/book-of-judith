@@ -29,11 +29,8 @@ var Poetry = {
         
         $saveButton.click(function (e) {
             e.preventDefault();
-            console.log("Saving Image..." + that.stage);
             that.stage.toDataURL({
                 callback: function(dataUrl) {
-                    // window.open(dataUrl);
-                    console.log(dataUrl);
                     that.fileHandler(dataUrl);
                 }
             });
@@ -117,20 +114,16 @@ var Poetry = {
 
         fd.append( "image", this.dataURLtoBlob(imageData), 'poetry.png' );
 
-        xhr.addEventListener( "progress", function( event ) {
-          if ( event.lengthComputable ) {
-            console.log( "%d%% complete", oEvent.loaded / oEvent.total * 100 );
-          }
-        });
         xhr.addEventListener( "load", function() {
           if (this.status != 200) {
             return;
           }
 
           var url = JSON.parse( this.responseText ).url;
-            
-          console.log(url);
-          console.log( "Done uploading %s", fd.name );
+
+          var tags = JSON.parse( localStorage.getItem( "tags" ) ) || [];
+          tags.push( url );
+          localStorage.setItem( "tags", JSON.stringify( tags ) );
         });
         xhr.open( "POST", "/upload", false );
         xhr.send( fd );
