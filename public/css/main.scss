@@ -130,8 +130,6 @@ textarea {
   font-style: normal;
 }
 
-
-
 /* Variables */
 
 $gothamThin: 'Conv_Gotham-Thin';
@@ -153,6 +151,7 @@ html {
 }
 
 .container {
+  text-align: center;
   width: 960px;
   height: 600px;
   overflow: hidden;
@@ -170,10 +169,7 @@ html {
   border: none;
 }
 
-/* Home */
-
-#home {
-  text-align: center;
+@mixin header {
   h1 {
     color: #8c8b8a;
     font-size: 31px;
@@ -195,10 +191,24 @@ html {
     margin: 0 auto;
     display: block;
   }
+}
+
+/* Home */
+
+#home {
+  @include header;
   h2 {
     font-size: 46px;
     font-family: $gothamMedium;
     font-weight: normal;
+    margin-bottom: 10px;
+  }
+  #contributions {
+    text-align: center;
+    img {
+      display: inline-block;
+      width: 25%;
+    }
   }
   #joinButton {
     @include button;
@@ -219,44 +229,51 @@ html {
 /* Avatar */
 
 #avatar {
-  button {
-    background: #000;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    font-family: $gothamBold;
-    text-transform: uppercase;
-    display: block;
-    margin: 5px auto;
+  @include header;
+  #finished {
+    @include button;
+    width: 170px;
+    position: absolute;
+    right: 90px;
+    bottom: 90px;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-family: $gothamMedium;
   }
-  #webcamFeed {
-    width: 100%;
+  #webcamCol {
+    position: absolute;
+    top: 160px;
+    left: 80px;
+    width: 250px;
+    video {
+      border: 4px solid #fff;
+      width: 100%;
+    }
   }
   #avatarPreview {
     width: 100%;
   }
-  .webcamCol {
-    float: left;
-    width: 25%;
+  button {
+    border: none;
+    background: none;
+    color: $yellow;
+    font-family: $gothamMedium;
+    text-transform: uppercase;
+    font-size: 16px;
   }
-  .previewCol {
-    float: right;
-    width: 75%;
+  #userInfo {
+    position: absolute;
+    top: 175px;
+    left: 350px;
+    input {
+      font-size: 45px;
+      font-family: $gothamThin;
+      background: none;
+      color: #fff;
+      border: none;
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes

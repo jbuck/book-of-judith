@@ -117,6 +117,7 @@ html {
   font-family: "Conv_Gotham-Medium"; }
 
 .container {
+  text-align: center;
   width: 960px;
   height: 600px;
   overflow: hidden;
@@ -125,68 +126,112 @@ html {
   position: relative; }
 
 /* Home */
-#home {
-  text-align: center; }
-  #home h1 {
-    color: #8c8b8a;
-    font-size: 31px;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-family: "Conv_Gotham-Bold";
-    line-height: 1;
-    margin: 35px 0 15px 0; }
-    #home h1 span {
-      font-size: 21px;
-      font-family: "Conv_Gotham-Light";
-      text-transform: none; }
-  #home hr {
-    border-top: 1px solid #676562;
-    width: 175px;
-    height: 0px;
-    margin: 0 auto;
-    display: block; }
-  #home h2 {
-    font-size: 46px;
-    font-family: "Conv_Gotham-Medium";
-    font-weight: normal; }
-  #home #joinButton {
-    color: #272421;
-    background: #ffcc33;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    border: none;
-    width: 240px;
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-    padding: 18px 25px;
-    font-size: 26px;
-    font-family: "Conv_Gotham-Medium"; }
-  #home #check {
-    font-size: 21px;
-    font-family: "Conv_Gotham-Light"; }
-
-/* Avatar */
-#avatar button {
-  background: #000;
-  border: none;
-  color: #fff;
-  padding: 10px;
+#home h1 {
+  color: #8c8b8a;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: normal;
   font-family: "Conv_Gotham-Bold";
+  line-height: 1;
+  margin: 35px 0 15px 0; }
+  #home h1 span {
+    font-size: 21px;
+    font-family: "Conv_Gotham-Light";
+    text-transform: none; }
+#home hr {
+  border-top: 1px solid #676562;
+  width: 175px;
+  height: 0px;
+  margin: 0 auto;
+  display: block; }
+#home h2 {
+  font-size: 46px;
+  font-family: "Conv_Gotham-Medium";
+  font-weight: normal;
+  margin-bottom: 10px; }
+#home #contributions {
+  text-align: center; }
+  #home #contributions img {
+    display: inline-block;
+    width: 25%; }
+#home #joinButton {
+  color: #272421;
+  background: #ffcc33;
+  text-decoration: none;
   text-transform: uppercase;
   display: block;
-  margin: 5px auto; }
-#avatar #webcamFeed {
-  width: 100%; }
+  border: none;
+  width: 240px;
+  position: absolute;
+  right: 0;
+  bottom: 35px;
+  padding: 18px 25px;
+  font-size: 26px;
+  font-family: "Conv_Gotham-Medium"; }
+#home #check {
+  font-size: 21px;
+  font-family: "Conv_Gotham-Light"; }
+
+/* Avatar */
+#avatar h1 {
+  color: #8c8b8a;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: "Conv_Gotham-Bold";
+  line-height: 1;
+  margin: 35px 0 15px 0; }
+  #avatar h1 span {
+    font-size: 21px;
+    font-family: "Conv_Gotham-Light";
+    text-transform: none; }
+#avatar hr {
+  border-top: 1px solid #676562;
+  width: 175px;
+  height: 0px;
+  margin: 0 auto;
+  display: block; }
+#avatar #finished {
+  color: #272421;
+  background: #ffcc33;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  border: none;
+  width: 170px;
+  position: absolute;
+  right: 90px;
+  bottom: 90px;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-family: "Conv_Gotham-Medium"; }
+#avatar #webcamCol {
+  position: absolute;
+  top: 160px;
+  left: 80px;
+  width: 250px; }
+  #avatar #webcamCol video {
+    border: 4px solid #fff;
+    width: 100%; }
 #avatar #avatarPreview {
   width: 100%; }
-#avatar .webcamCol {
-  float: left;
-  width: 25%; }
-#avatar .previewCol {
-  float: right;
-  width: 75%; }
+#avatar button {
+  border: none;
+  background: none;
+  color: #ffcc33;
+  font-family: "Conv_Gotham-Medium";
+  text-transform: uppercase;
+  font-size: 16px; }
+#avatar #userInfo {
+  position: absolute;
+  top: 175px;
+  left: 350px; }
+  #avatar #userInfo input {
+    font-size: 45px;
+    font-family: "Conv_Gotham-Thin";
+    background: none;
+    color: #fff;
+    border: none; }
 
 /* ==========================================================================
    Helper classes

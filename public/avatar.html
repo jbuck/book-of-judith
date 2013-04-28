@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Avatar Creator</title>
+        <title>The Book of Judith: The Choir of the Senses | Avatar Creator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/normalize.css">
@@ -16,14 +16,21 @@
     <body>
         
         <div id="avatar" class="container clearfix">
-            <div class="webcamCol">
+            <h1><span>The Book of Judith</span><br>The Choir of the Senses</h1>
+            <hr>
+            <div id="webcamCol">
                 <video id="webcamFeed" autoplay></video>
                 <button id="captureButton">Capture</button>
             </div>
-            <div class="previewCol">
-                <canvas id="avatarPreview"></canvas>
-                <button id="saveButton">Save</button>
+            
+            <canvas id="avatarPreview"></canvas>
+            <button id="saveButton">Save</button>
+            
+            <div id="userInfo">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
             </div>
+            <a href="sound-recorder.html" id="finished">Finished <span>»</span></a>
         </div>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
