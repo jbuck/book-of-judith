@@ -1,4 +1,4 @@
-/* @override 
+/* @override
    http://ocupopdev.com/popcorn-embed/css/controls.css */
 
 .controls {
@@ -72,7 +72,7 @@
   margin-top: 0;
   height: 41px;
   position: absolute;
-  left: 135px;
+  left: 155px;
   right: 65px;
   padding-right: 20px;
   border-right: 1px solid #d5d6d5;
@@ -114,7 +114,7 @@
 
 .time {
   position: absolute;
-  left: 43px;
+  left: 63px;
   height: 27px;
   background: url( "../resources/controls/controls_time_arrowL.gif" ) no-repeat left top, url( "../resources/controls/controls_time_arrowR.gif" ) right top no-repeat;
   background-color: #f2f2f2;
