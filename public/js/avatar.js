@@ -70,27 +70,21 @@ var Avatar = {
     },
 
     fileHandler: function(imageData) {
-        console.log(imageData);
-        
         var xhr = new XMLHttpRequest();
         var fd = new FormData();
 
         fd.append( "image", this.dataURLtoBlob(imageData), 'avatar.png' );
 
-        xhr.addEventListener( "progress", function( event ) {
-          if ( event.lengthComputable ) {
-            console.log( "%d%% complete", oEvent.loaded / oEvent.total * 100 );
-          }
-        });
         xhr.addEventListener( "load", function() {
           if (this.status != 200) {
             return;
           }
 
           var url = JSON.parse( this.responseText ).url;
-            
-          console.log(url);
-          console.log( "Done uploading %s", fd );
+
+          var tags = JSON.parse( localStorage.getItem( "tags" ) ) || [];
+          tags.push( url );
+          localStorage.setItem( "tags", JSON.stringify( tags ) );
         });
         xhr.open( "POST", "/upload", false );
         xhr.send( fd );
