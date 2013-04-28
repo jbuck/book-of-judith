@@ -99,11 +99,23 @@ var Poetry = {
         this.stage.add(this.layer);
     },
     
+    dataURLtoBlob: function (dataURL) {
+      // Decode the dataURL    
+      var binary = atob(dataURL.split(',')[1]);
+      // Create 8-bit unsigned array
+      var array = [];
+      for(var i = 0; i < binary.length; i++) {
+          array.push(binary.charCodeAt(i));
+      }
+      // Return our Blob object
+      return new Blob([new Uint8Array(array)], {type: 'image/png'});
+    },
+
     fileHandler: function(imageData) {
         var xhr = new XMLHttpRequest();
         var fd = new FormData();
 
-        fd.append( "image", imageData );
+        fd.append( "image", this.dataURLtoBlob(imageData), 'poetry.png' );
 
         xhr.addEventListener( "progress", function( event ) {
           if ( event.lengthComputable ) {
@@ -116,11 +128,9 @@ var Poetry = {
           }
 
           var url = JSON.parse( this.responseText ).url;
-
-          console.log( "Done uploading %s", f.name );
-          var li = document.createElement( "li" );
-          li.innerHTML = "<a href='" + url + "'>" + url + "</a>";
-          uploaded.appendChild(li);
+            
+          console.log(url);
+          console.log( "Done uploading %s", fd.name );
         });
         xhr.open( "POST", "/upload", false );
         xhr.send( fd );
