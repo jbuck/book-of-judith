@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>The Book of Judith: The Choir of the Senses | Poetry</title>
+        <title>The Book of Judith: The Choir of the Senses | Playback</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/normalize.css">
@@ -34,15 +34,14 @@
             </div>
           <div id="controls" class="controls"><div>
         </div>
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/popcorn.js"></script>
-        <script src="js/popcorn.code.js"></script>
-        <script src="js/popcorn.sequencer.js"></script>
-        <script src="js/popcorn.text.js"></script>
-        <script src="js/require.js"></script>
-        <script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/popcorn.js"></script>
+    <script src="js/popcorn.code.js"></script>
+    <script src="js/popcorn.sequencer.js"></script>
+    <script src="js/popcorn.text.js"></script>
+    <script src="js/require.js"></script>
+    <script>
             $(document).ready(function() {
                 var $userAvatar = $("#userAvatar"),
                     tags = JSON.parse(localStorage.getItem( "tags" )),
@@ -72,496 +71,555 @@
                     $("#modal").fadeIn(250);
                 });
             });
-          
-          var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
-            .sequencer({
-              volume: 100,
-              start: 0,
-              end: 100,
-              duration: 100,
-              target: "media",
-              width: 50,
-              height: 50,
-              zindex: 1,
-              source: "in-the-name/in-the-name-march-2011.mp3"
-            })
-            .text({
-              text: "*Singing* And here we stand",
-              start: 3,
-              end: 7,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* Here we stand in the name of Judith Snow",
-              start: 7.5,
-              end: 16.25,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* In the name of Judith Snow",
-              start: 17,
-              end: 24.75,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* Oh... Judith",
-              start: 25,
-              end: 31.5,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* Oh... Judith",
-              start: 32.5,
-              end: 39,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* You have brought us so far",
-              start: 39.5,
-              end: 41,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Choir* You have brought us so far",
-              start: 41,
-              end: 42.75,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* You have brought us so far",
-              start: 43,
-              end: 44.5,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Choir* You have brought us so far",
-              start: 44.5,
-              end: 46.75,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* We have heard your song and your song has warmed our hearts,",
-              start: 47.25,
-              end: 51.75,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              text: "*Singing* and our bodies are for you",
-              start: 51.75,
-              end: 54,
-              width: 100,
-              fontSize: 10,
-              transition: "none",
-              target: "media",
-              zindex: 2
-            })
-            .text({
-              "start": 53.958078373314265,
-              "end": 54.97261797668331,
-              "text": "*Singing* Make a play",
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make a play",
-              "start": 55.82134005767193,
-              "end": 56.83588005767193,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make a play",
-              "start": 57.52408,
-              "end": 58.53862,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make a play",
-              "start": 59.34033,
-              "end": 60.35487,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make this play",
-              "start": 61.36232462618259,
-              "end": 62.376864626182595,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "start": 86.30738898558823,
-              "end": 97.03527447763592,
-              "text": "*All* In the name of Judith Snow",
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Take a play and we will have our day",
-              "start": 63.30796,
-              "end": 65.85210374241333,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Take a play and the world will know you're okay",
-              "start": 66.76216,
-              "end": 71.68561563672665,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* You're okay",
-              "start": 72.1298,
-              "end": 73.14434,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* You're okay",
-              "start": 73.87123,
-              "end": 74.88577,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* You're okay",
-              "start": 75.6485,
-              "end": 76.66304,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* You're okay",
-              "start": 77.50459,
-              "end": 78.51913,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make this play",
-              "start": 79.36786,
-              "end": 80.3824,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make a play",
-              "start": 81.18812,
-              "end": 82.20266,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Take a play",
-              "start": 83.00131547595224,
-              "end": 84.01585547595224,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Singing* Make a play",
-              "start": 84.74982,
-              "end": 85.76436,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 56.64432880280284,
-              "end": 57.658868802802836,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 54.89902508468041,
-              "end": 55.913565084680414,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 58.44639036541705,
-              "end": 59.460930365417056,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 60.24135719746981,
-              "end": 61.25589719746981,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 62.234976485243806,
-              "end": 63.2495164852438,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 64.21816508202453,
-              "end": 65.23270508202454,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 65.88793770384258,
-              "end": 66.90247770384259,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 67.59354235617177,
-              "end": 68.60808235617178,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 71.18391181338573,
-              "end": 72.19845181338573,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 69.36364466342097,
-              "end": 70.37818466342097,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 72.96834693283938,
-              "end": 73.98288693283938,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 74.71695002178191,
-              "end": 75.73149002178191,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 76.55871639005333,
-              "end": 77.57325639005333,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 78.42914838273367,
-              "end": 79.44368838273367,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 80.25658193880065,
-              "end": 81.27112193880065,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 82.14851314978765,
-              "end": 83.16305314978764,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 83.83261858381016,
-              "end": 84.84715858381016,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            })
-            .text({
-              "text": "*Choir* Make a play",
-              "start": 85.58122167275268,
-              "end": 86.59576167275267,
-              "target": "media",
-              "width": 100,
-              "fontSize": 10,
-              "transition": "none",
-              "zindex": 2
-            });
-    
-          var require = requirejs.config({
-            baseUrl: "/js",
-            paths: {
-              "text": "require.text"
-            }
-          });
-    
-          require( [ "ui/widget/controls" ], function( Controls ) {
-            p.controls( true );
-            Controls.create( "controls", p );
-          });
-    
-          var $addEvent = $("#addEvent");
-          $addEvent.click(function () {
-              p.code({
-              start: 15,
-              end: 30,
-              onStart: function( options ) {
-                console.log("Hahahahah!");
-              },
-              onEnd: function( options ) {
-                console.log("STOP LAUGHING!");
-              }
-            })
-          });
-    
-        </script>
-    </body>
+
+	  var trackDetails = JSON.parse(localStorage.getItem('boj_audio')) || [];
+	  console.log(trackDetails);
+
+      var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
+        .sequencer({
+          volume: 10,
+          start: 0,
+          end: 100,
+          duration: 100,
+          target: "media",
+          width: 50,
+          height: 50,
+          zindex: 1,
+          source: "in-the-name/in-the-name-march-2011.ogg"
+        })
+        .sequencer({
+			volume: 100,
+			start: trackDetails["start"],
+			end: trackDetails["end"],
+			duration: trackDetails["duration"],
+			target: "media",
+			width: 50,
+			height: 50,
+			zindex: 1,
+			source: trackDetails["url"]
+		})
+        .text({
+          text: "*Singing* And here we stand",
+          start: 3,
+          end: 7,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* Here we stand in the name of Judith Snow",
+          start: 7.5,
+          end: 16.25,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* In the name of Judith Snow",
+          start: 17,
+          end: 24.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* Oh... Judith",
+          start: 25,
+          end: 31.5,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* Oh... Judith",
+          start: 32.5,
+          end: 39,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* You have brought us so far",
+          start: 39.5,
+          end: 41,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Choir* You have brought us so far",
+          start: 41,
+          end: 42.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* You have brought us so far",
+          start: 43,
+          end: 44.5,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Choir* You have brought us so far",
+          start: 44.5,
+          end: 46.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* We have heard your song and your song has warmed our hearts,",
+          start: 47.25,
+          end: 51.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          text: "*Singing* and our bodies are for you",
+          start: 51.75,
+          end: 54,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "start": 53.958078373314265,
+          "end": 54.97261797668331,
+          "text": "*Singing* Make a play",
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make a play",
+          "start": 55.82134005767193,
+          "end": 56.83588005767193,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make a play",
+          "start": 57.52408,
+          "end": 58.53862,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make a play",
+          "start": 59.34033,
+          "end": 60.35487,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make this play",
+          "start": 61.36232462618259,
+          "end": 62.376864626182595,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "start": 86.30738898558823,
+          "end": 97.03527447763592,
+          "text": "*All* In the name of Judith Snow",
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Take a play and we will have our day",
+          "start": 63.30796,
+          "end": 65.85210374241333,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Take a play and the world will know you're okay",
+          "start": 66.76216,
+          "end": 71.68561563672665,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* You're okay",
+          "start": 72.1298,
+          "end": 73.14434,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* You're okay",
+          "start": 73.87123,
+          "end": 74.88577,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* You're okay",
+          "start": 75.6485,
+          "end": 76.66304,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* You're okay",
+          "start": 77.50459,
+          "end": 78.51913,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make this play",
+          "start": 79.36786,
+          "end": 80.3824,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make a play",
+          "start": 81.18812,
+          "end": 82.20266,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Take a play",
+          "start": 83.00131547595224,
+          "end": 84.01585547595224,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Singing* Make a play",
+          "start": 84.74982,
+          "end": 85.76436,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 56.64432880280284,
+          "end": 57.658868802802836,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 54.89902508468041,
+          "end": 55.913565084680414,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 58.44639036541705,
+          "end": 59.460930365417056,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 60.24135719746981,
+          "end": 61.25589719746981,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 62.234976485243806,
+          "end": 63.2495164852438,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 64.21816508202453,
+          "end": 65.23270508202454,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 65.88793770384258,
+          "end": 66.90247770384259,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 67.59354235617177,
+          "end": 68.60808235617178,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 71.18391181338573,
+          "end": 72.19845181338573,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 69.36364466342097,
+          "end": 70.37818466342097,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 72.96834693283938,
+          "end": 73.98288693283938,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 74.71695002178191,
+          "end": 75.73149002178191,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 76.55871639005333,
+          "end": 77.57325639005333,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 78.42914838273367,
+          "end": 79.44368838273367,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 80.25658193880065,
+          "end": 81.27112193880065,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 82.14851314978765,
+          "end": 83.16305314978764,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 83.83261858381016,
+          "end": 84.84715858381016,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        })
+        .text({
+          "text": "*Choir* Make a play",
+          "start": 85.58122167275268,
+          "end": 86.59576167275267,
+          "target": "media",
+          "width": 100,
+          "fontSize": 10,
+          "transition": "none",
+          "zindex": 2,
+          fontColor: "#FFFFFF"
+        });
+
+      var require = requirejs.config({
+        baseUrl: "/js",
+        paths: {
+          "text": "require.text"
+        }
+      });
+
+      require( [ "ui/widget/controls" ], function( Controls ) {
+        p.controls( true );
+        Controls.create( "controls", p );
+      });
+
+      var $addEvent = $("#addEvent");
+      $addEvent.click(function () {
+          p.code({
+          start: 15,
+          end: 30,
+          onStart: function( options ) {
+            console.log("Hahahahah!");
+          },
+          onEnd: function( options ) {
+            console.log("STOP LAUGHING!");
+          }
+        })
+      });
+
+    </script>
+  </body>
 </html>
