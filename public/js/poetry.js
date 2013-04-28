@@ -29,7 +29,7 @@ var Poetry = {
         
         $saveButton.click(function (e) {
             e.preventDefault();
-            console.log("Saving Image...");
+            console.log("Saving Image..." + that.stage);
             that.stage.toDataURL({
                 callback: function(dataUrl) {
                     // window.open(dataUrl);
