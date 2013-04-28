@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="css/playback.css">
     <link rel="stylesheet" href="css/controls.css">
     <link rel="stylesheet" href="css/popcorn.text.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div>
+    <div class="container">
       <div id="media">
         <div class="video"></div>
       </div>
@@ -22,9 +23,12 @@
     <script src="js/popcorn.text.js"></script>
     <script src="js/require.js"></script>
     <script>
+	  var trackDetails = JSON.parse(localStorage.getItem('boj_audio')) || [];
+	  console.log(trackDetails);
+
       var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
         .sequencer({
-          volume: 100,
+          volume: 10,
           start: 0,
           end: 100,
           duration: 100,
@@ -32,8 +36,19 @@
           width: 50,
           height: 50,
           zindex: 1,
-          source: "in-the-name/in-the-name-march-2011.mp3"
+          source: "in-the-name/in-the-name-march-2011.ogg"
         })
+        .sequencer({
+			volume: 100,
+			start: trackDetails["start"],
+			end: trackDetails["end"],
+			duration: trackDetails["duration"],
+			target: "media",
+			width: 50,
+			height: 50,
+			zindex: 1,
+			source: trackDetails["url"]
+		})
         .text({
           text: "*Singing* And here we stand",
           start: 3,

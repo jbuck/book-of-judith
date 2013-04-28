@@ -1,6 +1,6 @@
 SC.initialize({
 	client_id : "cd7613b1b7b2d481b1cb0858e102cc7d",
-	redirect_uri : "http://localhost/boj/trunk/public/sccallback.html",
+	redirect_uri : "http://localhost:3000/sccallback.html",
 	//redirect_uri: "http://book-of-judith.herokuapp.com/sccallback.html",
 });
 
