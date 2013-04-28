@@ -24,7 +24,7 @@ var Avatar = {
     // Build Objects
     buildObjects: function () {
         this.$captureButton = $("#captureButton");
-        this.$saveButton = $("#saveButton");
+        this.$saveButton = $("#finished");
         this.webcamFeed = document.querySelector('video');
         this.avatarPreview = document.querySelector('canvas');
         this.ctx = this.avatarPreview.getContext('2d');
@@ -87,6 +87,7 @@ var Avatar = {
           var tags = JSON.parse( localStorage.getItem( "tags" ) ) || [];
           tags.push( url );
           localStorage.setItem( "tags", JSON.stringify( tags ) );
+          window.location = "main-menu.html";
         });
         xhr.open( "POST", "/upload", false );
         xhr.send( fd );

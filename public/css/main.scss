@@ -332,6 +332,66 @@ html {
   }
 }
 
+/* Playback */
+
+#playback {
+  background: #000 url(../img/playback.png) 0 0 no-repeat;
+  #media {
+    display: none;
+  }
+  #userAvatar {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: 345px;
+    left: 316px;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+  }
+  #modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    #close {
+      padding: 10px 15px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #000;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      font-family: $gothamBold;
+      cursor: pointer;
+      border: 1px solid #fff;
+      vertical-align: middle;
+    }
+    #userLarge {
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -200px;
+      margin-left: -250px;
+      border: 4px solid #fff;
+      background-size: cover;
+      background-position: center center;
+      #poetry {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
