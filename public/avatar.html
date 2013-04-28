@@ -14,12 +14,17 @@
         <script src="js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-
-        <video id="webcamFeed" autoplay></video>
-        <canvas id="avatarPreview"></canvas>
-
-        <button id="captureButton">Capture</button>
-        <button id="saveButton">Save</button>
+        
+        <div id="avatar" class="container clearfix">
+            <div class="webcamCol">
+                <video id="webcamFeed" autoplay></video>
+                <button id="captureButton">Capture</button>
+            </div>
+            <div class="previewCol">
+                <canvas id="avatarPreview"></canvas>
+                <button id="saveButton">Save</button>
+            </div>
+        </div>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>

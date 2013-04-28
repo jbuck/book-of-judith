@@ -16,3 +16,4 @@ results
 .env
 npm-debug.log
 node_modules/
+public/css/.sass-cache

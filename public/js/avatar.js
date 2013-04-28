@@ -51,8 +51,10 @@ var Avatar = {
     capture: function () {
         var that = this;
         
-        this.avatarPreview.width = this.webcamFeed.clientWidth;
-        this.avatarPreview.height = this.webcamFeed.clientHeight;
+        // this.avatarPreview.width = this.webcamFeed.clientWidth;
+        // this.avatarPreview.height = this.webcamFeed.clientHeight;
+        this.avatarPreview.width = 640;
+        this.avatarPreview.height = 480;
         
         this.ctx.drawImage(that.webcamFeed, 0, 0);
     },
