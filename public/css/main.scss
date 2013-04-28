@@ -275,6 +275,63 @@ html {
   }
 }
 
+/* Main Menu */
+
+#main-menu {
+  @include header;
+  #voices {
+    width: 80%;
+    margin: 150px auto 0 auto;
+    div {
+      float: left;
+      width: 31%;
+      margin: 0 1%;
+      a {
+        display: block;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        font-size: 35px;
+        text-transform: uppercase;
+        font-family: $gothamBold;
+        text-decoration: none;
+      }
+    }
+  }
+  #finished {
+    @include button;
+    width: 240px;
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    padding: 18px 25px;
+    font-size: 26px;
+    font-family: $gothamMedium;
+  }
+}
+
+/* Poetry */
+
+#poetry {
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #saveButton {
+    @include button;
+    width: auto;
+    position: absolute;
+    right: 420px;
+    left: 420px;
+    bottom: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-family: $gothamMedium;
+    text-align: center;
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

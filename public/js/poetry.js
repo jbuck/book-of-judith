@@ -40,10 +40,16 @@ var Poetry = {
 
     // Create Word/Phrase Objects
     buildMagnets: function () {
-        this.words.the = this.buildMagnet("the");
-        this.words.book = this.buildMagnet("book");
-        this.words.of = this.buildMagnet("of");
-        this.words.judith = this.buildMagnet("judith");
+        this.words.quote01 = this.buildMagnet("quote01");
+        this.words.quote02 = this.buildMagnet("quote02");
+        this.words.quote03 = this.buildMagnet("quote03");
+        this.words.quote04 = this.buildMagnet("quote04");
+        this.words.quote05 = this.buildMagnet("quote05");
+        this.words.quote06 = this.buildMagnet("quote06");
+        this.words.quote07 = this.buildMagnet("quote07");
+        this.words.quote08 = this.buildMagnet("quote08");
+        this.words.quote09 = this.buildMagnet("quote09");
+        this.words.quote10 = this.buildMagnet("quote10");
         
         for (var key in this.words) {
            if (this.words.hasOwnProperty(key)) {
@@ -66,8 +72,8 @@ var Poetry = {
         
         wordObj = new Kinetic.Image({
             image: newWord,
-            x: Math.random() * 800 + 100,
-            y: Math.random() * 300 + 50,
+            x: Math.random() * 480,
+            y: Math.random() * 450,
             width: newWord.width,
             height: newWord.height,
             draggable: true
@@ -82,7 +88,7 @@ var Poetry = {
         
         this.stage = new Kinetic.Stage({
             container: "container",
-            width: 1000,
+            width: 960,
             height: 500
         });
         this.layer = new Kinetic.Layer();
@@ -124,6 +130,7 @@ var Poetry = {
           var tags = JSON.parse( localStorage.getItem( "tags" ) ) || [];
           tags.push( url );
           localStorage.setItem( "tags", JSON.stringify( tags ) );
+          window.location = "main-menu.html";
         });
         xhr.open( "POST", "/upload", false );
         xhr.send( fd );
