@@ -72,8 +72,8 @@
   margin-top: 0;
   height: 41px;
   position: absolute;
-  left: 185px;
-  right: 215px;
+  left: 135px;
+  right: 65px;
   padding-right: 20px;
   border-right: 1px solid #d5d6d5;
 }
@@ -87,6 +87,7 @@
   background: #f2f2f2;
   border-right: 1px solid #d5d6d5;
   border-left: 1px solid #d5d6d5;
+  display: none;
 }
 
 #controls-timebar {
@@ -104,7 +105,7 @@
 
 #controls-progressbar {
   height: 100%;
-  background: #1eb771;
+  background: #999;
   position: absolute;
   border-radius: 0;
 }
@@ -123,10 +124,11 @@
   padding-right: 15px;
   padding-left: 15px;
   color: #58595b;
+  font-family: sans-serif;
 }
 
 #controls-currenttime {
-  color: #1eb771;
+  color: #000;
   position: relative;
   text-align: left;
   left: auto;
@@ -149,7 +151,7 @@
 
 #controls-volume-container {
   position: absolute;
-  right: 165px;
+  right: 10px;
   width: 38px;
 }
 
@@ -167,7 +169,7 @@
 
 #controls-volume-progressbar {
   height: 100%;
-  background: #1eb771;
+  background: #666;
   position: absolute;
   border-radius: 0;
 }
@@ -196,7 +198,7 @@
 #controls-play {
   width: 28px;
   height: 28px;
-  background: #1eb771 url( "../resources/controls/controls_icon_playPause.png" ) no-repeat;
+  background: #000 url( "../resources/controls/controls_icon_playPause.png" ) no-repeat;
   padding: 0;
   border-radius: 3px;
   margin-top: 7px;
@@ -205,7 +207,7 @@
 }
 
 #controls-play:hover {
-  background-color: #60c7a5;
+  background-color: #333;
 }
 
 #controls-mute {
@@ -275,4 +277,5 @@
   position: absolute;
   right: 0;
   cursor: pointer;
+  display: none;
 }

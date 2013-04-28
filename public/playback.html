@@ -10,9 +10,13 @@
       <div id="media">
         <div class="video"></div>
       </div>
+      <button id="addEvent">Add Event</button>
       <div id="controls" class="controls"><div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/popcorn.js"></script>
+    <script src="js/popcorn.code.js"></script>
     <script src="js/popcorn.sequencer.js"></script>
     <script src="js/require.js"></script>
     <script>
@@ -41,6 +45,20 @@
         Controls.create( "controls", p );
       });
 
+      var $addEvent = $("#addEvent");
+      $addEvent.click(function () {
+          p.code({
+          start: 15,
+          end: 30,
+          onStart: function( options ) {
+            console.log("Hahahahah!");
+          },
+          onEnd: function( options ) {
+            console.log("STOP LAUGHING!");
+          }
+        })
+      });
+      
     </script>
   </body>
 </html>
