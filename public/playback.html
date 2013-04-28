@@ -4,6 +4,7 @@
     <title>Playback demo</title>
     <link rel="stylesheet" href="css/playback.css">
     <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/popcorn.text.css">
   </head>
   <body>
     <div>
@@ -18,6 +19,7 @@
     <script src="js/popcorn.js"></script>
     <script src="js/popcorn.code.js"></script>
     <script src="js/popcorn.sequencer.js"></script>
+    <script src="js/popcorn.text.js"></script>
     <script src="js/require.js"></script>
     <script>
       var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
@@ -31,6 +33,116 @@
           height: 50,
           zindex: 1,
           source: "in-the-name/in-the-name-march-2011.mp3"
+        })
+        .text({
+          text: "*Singing* And here we stand",
+          start: 3,
+          end: 7,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* Here we stand in the name of Judith Snow",
+          start: 7.5,
+          end: 16.25,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* In the name of Judith Snow",
+          start: 17,
+          end: 24.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* Oh... Judith",
+          start: 25,
+          end: 31.5,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* Oh... Judith",
+          start: 32.5,
+          end: 39,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* You have brought us so far",
+          start: 39.5,
+          end: 41,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Choir* You have brought us so far",
+          start: 41,
+          end: 42.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* You have brought us so far",
+          start: 43,
+          end: 44.5,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Choir* You have brought us so far",
+          start: 44.5,
+          end: 46.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* We have heard your song and your song has warmed our hearts,",
+          start: 47.25,
+          end: 51.75,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
+        })
+        .text({
+          text: "*Singing* and our bodies are for you",
+          start: 51.75,
+          end: 54,
+          width: 100,
+          fontSize: 10,
+          transition: "none",
+          target: "media",
+          zindex: 2
         });
 
       var require = requirejs.config({
@@ -58,7 +170,7 @@
           }
         })
       });
-      
+
     </script>
   </body>
 </html>
