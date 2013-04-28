@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Playback demo</title>
-    <link rel="stylesheet" href="css/playback.css">
-    <link rel="stylesheet" href="css/controls.css">
-    <link rel="stylesheet" href="css/popcorn.text.css">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <div class="container">
-      <div id="media">
-        <!-- <div class="video"></div> -->
-      </div>
-      <!-- <button id="addEvent">Add Event</button> -->
-      <div id="controls" class="controls"><div>
-    </div>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Book of Judith: The Choir of the Senses | Playback</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/playback.css">
+        <link rel="stylesheet" href="css/controls.css">
+        <link rel="stylesheet" href="css/popcorn.text.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div id="playback" class="container">
+          <div id="userAvatar">
+              <div id="userArt"></div>
+              <div id="userPoetry"></div>
+          </div>
+          <div id="media">
+            <div class="video"></div>
+          </div>
+            <div id="modal">
+                <div id="close">×</div>
+                <div id="userLarge">
+                  <img src="" id="poetry">
+                  <img src="" id="art">
+                </div>
+            </div>
+          <div id="controls" class="controls"><div>
+        </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="js/popcorn.js"></script>
@@ -23,13 +42,43 @@
     <script src="js/popcorn.text.js"></script>
     <script src="js/require.js"></script>
     <script>
+            $(document).ready(function() {
+                var $userAvatar = $("#userAvatar"),
+                    tags = JSON.parse(localStorage.getItem( "tags" )),
+                    filename = "",
+                    poetryFilename = "",
+                    artFilename = "";
+
+                console.log(tags);
+
+                for (var i = 0; i < tags.length; i++) {
+                    console.log(tags[i]);
+                    if (tags[i].indexOf("avatar") !== -1) {
+                        filename = tags[i];
+                    }
+                    if (tags[i].indexOf("poetry") !== -1) {
+                        poetryFilename = tags[i];
+                    }
+                }
+                console.log("userAvatarImage: " + filename);
+                $userAvatar.css("background-image", "url(" + filename + ")");
+                $("#userLarge").css("background-image", "url(" + filename + ")");
+                $("#poetry").attr("src", poetryFilename);
+                $("#close").click(function () {
+                    $("#modal").fadeOut(250);
+                });
+                $userAvatar.click(function () {
+                    $("#modal").fadeIn(250);
+                });
+            });
+
 	  var trackDetails = JSON.parse(localStorage.getItem('boj_audio')) || [];
 	  console.log(trackDetails);
 
       var p = Popcorn.smart("#media", "#t=,100", { frameAnimation: true })
         .sequencer({
-          volume: 30,
-          start: 1,
+          volume: 1,
+          start: 0,
           end: 100,
           duration: 100,
           target: "media",
